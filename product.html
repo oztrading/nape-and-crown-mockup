@@ -1,0 +1,32 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>The Starter Set — Nape &amp; Crown (Mockup)</title><meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@500;600&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<div class="banner">Design mockup · Not a live store · Prices are proposals</div>
+<header><div class="wrap nav"><a href="index.html"><img src="assets/wordmark_ivory.svg" alt="Nape &amp; Crown" style="height:26px"></a>
+<ul><li><a href="index.html#how">How it works</a></li><li><a href="index.html#shades">Shades</a></li><li><a href="index.html#shop">Shop</a></li><li><a href="index.html#faq">FAQ</a></li></ul><a class="btn ghost" href="#">Bag (0)</a></div></header>
+<div class="wrap pdp"><div class="gallery"><div class="main" id="main" style="background-image:url(assets/unboxing.jpg)"></div>
+<div class="row"><div style="background-image:url(assets/unboxing.jpg)" data-i="assets/unboxing.jpg"></div><div style="background-image:url(assets/hero.jpg)" data-i="assets/hero.jpg"></div><div style="background-image:url(assets/vanity.jpg)" data-i="assets/vanity.jpg"></div></div>
+<p class="note" style="color:var(--muted)">Concept renders. Final product photos come after samples.</p></div>
+<div><span class="eyebrow">Nape &amp; Crown</span><h1 class="serif" style="font-size:clamp(38px,4vw,58px);line-height:1.05;margin:10px 0 12px">The Starter Set</h1>
+<p style="color:#CFC8BB">Everything for fuller-looking hair in about a minute, in a box worth keeping.</p>
+<div class="opt"><label>Shade · <span id="sn">Espresso</span></label><div class="shades" id="sw" style="margin-top:0"></div></div>
+<div class="opt"><label>Purchase</label><div class="choice" id="buy">
+<button class="on" data-p="68"><span>Starter Set + refill subscription<small>Then a $24 refill every 6 weeks. Skip or cancel anytime.</small></span><span>$68</span></button>
+<button data-p="68"><span>One-time purchase<small>Refills $29 each when you need them.</small></span><span>$68</span></button></div></div>
+<button class="btn" style="width:100%;margin-top:26px" id="add">Add to bag · $68</button>
+<p class="note" style="color:var(--muted);text-align:center">Free shade swap within 30 days · Ships in a plain outer box</p>
+<ul class="inbox"><li><span>Aluminum shaker + 25 g fibers</span><span>$49 value</span></li><li><span>Hold Mist, 120 ml</span><span>$18 value</span></li><li><span>Brass hairline guide</span><span>$12 value</span></li><li><span>Magnetic gift box</span><span>Included</span></li></ul>
+<div class="faq" style="margin-top:20px">
+<details style="border-color:var(--line)" open><summary>How to use</summary><p style="color:#BDB6A9">Style dry hair. Shake fibers over thin areas, pat lightly, then set with two passes of Hold Mist. Shampoo out.</p></details>
+<details style="border-color:var(--line)"><summary>Ingredients</summary><p style="color:#BDB6A9">Keratin fibers with cosmetic colorants. The full INCI list will appear here once the supplier formula is final.</p></details>
+<details style="border-color:var(--line)"><summary>Good to know</summary><p style="color:#BDB6A9">A cosmetic that changes how hair looks until it's washed out. It doesn't treat hair loss or change hair growth. For external use only. Avoid eyes.</p></details></div>
+</div></div>
+<footer><div class="wrap"><div class="legal" style="margin-top:0"><span>© 2026 Nape &amp; Crown (working name). Design mockup.</span><span>Cosmetic product. Not intended to diagnose, treat or prevent any condition.</span></div></div></footer>
+<div class="mock">Mockup · concept renders</div>
+<script src="shades.js"></script><script>
+initShades(document.getElementById('sw'),s=>{document.getElementById('sn').textContent=s[0]});
+document.querySelectorAll('.gallery .row div').forEach(d=>d.onclick=()=>document.getElementById('main').style.backgroundImage=`url(${d.dataset.i})`);
+document.querySelectorAll('#buy button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#buy button').forEach(x=>x.classList.remove('on'));b.classList.add('on')});
+document.getElementById('add').onclick=()=>{document.getElementById('add').textContent='Mockup only · no checkout'};
+</script></body></html>
